@@ -65,23 +65,25 @@ cats %*% dogs
 create a projection matrix 
 
 ```{r}
-# create matrix 
-insect_leslie <- matrix(c(0, 0, 600, 0.2, 0, 0, 0, 0,08, 0),
-                        nrow = 3, ncol = 3, 
-                        byrow = TRUE)
+# Create your matrix ----
+insect_leslie <- matrix(c(0, 0, 600, 0.2, 0, 0, 0, 0.08, 0), nrow = 3, ncol = 3, byrow = TRUE)
+
+# Check it out ----
 insect_leslie
 ```
 Specify initial conditions 
 ```{r}
-# insect life stage population size year 0 
-
+# Insect lifestage populations (year 0) ----
 insect_y0 <- c(12000, 700, 500)
 ```
 
 Find population for each life stage at T = 1 
 ```{r}
+# Populations at year 1 ----
 insect_y1 <- insect_leslie %*% insect_y0
-insect_y1
+
+# Check it out ----
+insect_y1 
 ```
 
 Find population for each lifestage  at year 1 
